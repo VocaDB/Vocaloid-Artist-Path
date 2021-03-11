@@ -146,7 +146,7 @@ fetch('data/test.txt')
     $("#pathFinding").css("display", "");
     $("#submit").on("click", function () {
         $("#result").empty();
-        $("#result").append(document.createTextNode("Computing Graph..."))
+        $("#result").append(document.createTextNode("Computing Path..."))
 
         let artist1;
         if (isNaN($("#artist1").val())) {
