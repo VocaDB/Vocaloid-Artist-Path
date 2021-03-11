@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VocaDB Path</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="path.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="text-align: center">
+    <div id="loading">
+        <h1>Loading Graph Data</h1>
+        <img id="loadingGif" src="giphy.webp"/>
+    </div>
+    <div id="pathFinding" style="display: none">
+        <div class="wrapper">
+            <div class="material-textfield blue">
+                <input type="text" id="artist1" required/>
+                <label data-content="artist1">1st Artist</label>
+            </div>
+
+            <div class="material-textfield red">
+                <input type="text" id="artist2" required/>
+                <label data-content="artist2">2nd Artist</label>
+            </div>
+        </div>
+        <a class="btn sm blue2" id="submit">Find path</a>
+
+    </div>
+    <div id="result">
+    </div>
+</div>
+</body>
+</html>
