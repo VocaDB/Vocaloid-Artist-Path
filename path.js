@@ -180,20 +180,18 @@ fetch('data/test.txt')
         }
 
         try {
-            setTimeout(function () {
-                let [path1, length1] = dijkstra(arr, artist1, artist2);
-                $("#result").empty();
-                for (let i = 1; i < path1.length; i++) {
-                    song = findSong(path1[i - 1], path1[i]);
-                    $("#result").append(`<p id="${i}"></p>`);
-                    getSongName(song, i);
-                    getArtistNames(path1[i - 1], path1[i], i);
+            let [path1, length1] = dijkstra(arr, artist1, artist2);
+            $("#result").empty();
+            for (let i = 1; i < path1.length; i++) {
+                song = findSong(path1[i - 1], path1[i]);
+                $("#result").append(`<p id="${i}"></p>`);
+                getSongName(song, i);
+                getArtistNames(path1[i - 1], path1[i], i);
 
-                }
-            }, 0);
+            }
 
         } catch (e) {
-            $("#result").append("<h2>No Path found (If you think this is incorrect, please file an issue on <a>GitHub</a>)</h2>");
+            $("#result").append("<h2>No Path found (If you think this is incorrect, please file an issue on <a href='https://github.com/Pyther99/Vocaloid-Artist-Path'>GitHub</a>)</h2>");
         }
 
     })
