@@ -114,7 +114,7 @@ fetch('data/test.txt')
         try {
             if (!G.hasNode(artist1) || !G.hasNode(artist2)) {
                 $("#result").empty()
-                    .append("<h2>Artist not Found (If you think this is incorrect, please file an issue on <a href='https://github.com/Pyther99/Vocaloid-Artist-Path'>GitHub</a>)</h2>");
+                    .append("<h2>Path not Found (If you think this is incorrect, please file an issue on <a href='https://github.com/Pyther99/Vocaloid-Artist-Path'>GitHub</a>)</h2>");
             } else {
                 let path1 = jsnx.bidirectionalShortestPath(G, artist1, artist2)
                 $("#result").empty();
