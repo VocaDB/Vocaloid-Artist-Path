@@ -58,9 +58,11 @@ let G = new jsnx.Graph();
 fetch('data/test.txt')
     .then(response => response.text())
     .then(data => {
+        let data_arr = [];
         data.split("\n").forEach(i => {
-            G.addEdge(i.split(" ")[0], i.split(" ")[1])
+            data_arr.push(i.split(" "))
         })
+        G.addEdgesFrom(data_arr)
     }).then(function () {
     $.ajax({
         type: "GET",
