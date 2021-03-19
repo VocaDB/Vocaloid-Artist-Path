@@ -59,9 +59,7 @@ fetch('data/test.txt')
     .then(response => response.text())
     .then(data => {
         data.split("\n").forEach(i => {
-            x = [i.split(" ")[0], i.split(" ")[1], 0]
             G.addEdge(i.split(" ")[0], i.split(" ")[1])
-            arr.push(x)
         })
     }).then(function () {
     $.ajax({
