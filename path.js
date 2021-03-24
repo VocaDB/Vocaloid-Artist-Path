@@ -2,12 +2,12 @@ function processData(allText) {
     var allTextLines = allText.split(/\r\n|\n/);
     var lines = [];
 
-    for (var i = 0; i < allTextLines.length; i++) {
-        var data = allTextLines[i].split(',');
+    for (var i of allTextLines) {
+        var data = i.split(',');
 
         var tarr = [];
-        for (var j = 0; j < data.length; j++) {
-            tarr.push(data[j]);
+        for (var j = of data) {
+            tarr.push(j);
         }
         lines.push(tarr);
     }
