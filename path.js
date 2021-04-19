@@ -6,7 +6,7 @@ function processData(allText) {
         var data = i.split(',');
 
         var tarr = [];
-        for (var j = of data) {
+        for (var j of data) {
             tarr.push(j);
         }
         lines.push(tarr);
